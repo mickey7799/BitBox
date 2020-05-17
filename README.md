@@ -1,2 +1,2 @@
 # BitBox
-To be or not to be?
+A distributed point-to-point file sharing system
