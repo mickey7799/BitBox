@@ -42,11 +42,11 @@ Public and private key technique, along with symmetric key encryption in general
 
 The process of authenticating peers is described as the following:
 
-1. First, each peer creates its own public and private key and sends the public key to all its connected peers.
+1.First, each peer creates its own public and private key and sends the public key to all its connected peers.
 
 2.Second, when a peer (peer A) initially connects to peers in its peer list. Peer A will send SYNMETRIC_KEY_DISTRIBUTE protocol to all the connected peers. The SYNMETRIC_KEY_DISTRIBUTE message contains the owner of the key and the symmetric key which is generated once peer A starts the connection. 
 
-3. That symmetric key is used to encrypt and decrypt FILE_CREATE_REQUEST and FILE_BYTES_REQUEST, which is followed by the FILE_MODIFY_RESPONSE in order to constrain that only peers with permission can receive the file and can modify the file.
+3.That symmetric key is used to encrypt and decrypt FILE_CREATE_REQUEST and FILE_BYTES_REQUEST, which is followed by the FILE_MODIFY_RESPONSE in order to constrain that only peers with permission can receive the file and can modify the file.
 
-4. Peers who receive the symmetric key will store the key and mapped it to the sender according to the owner field 
+4.Peers who receive the symmetric key will store the key and mapped it to the sender according to the owner field 
 of SYNMETRIC_KEY_DISTRIBUTE.
